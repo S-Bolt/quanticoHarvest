@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #map {
+    flex: 1;
+    height: 100vh;
+  }
+
+  #map-container {
+    display: flex;
+  }
+
+  #sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    height: 100vh;
+  }
