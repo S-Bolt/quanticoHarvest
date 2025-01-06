@@ -1,22 +1,110 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #map {
-    flex: 1;
-    height: 100vh;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; 
+}
 
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+#map-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar {
+  width: 300px;
+  padding: 20px;
+  border-right: 2px solid rgba(255, 254, 254, 0.3);
+  overflow-y: auto;
+  height: 100vh;
+  background-color: #06270e;
+
+  /* color: #96b09d; */
+}
+#sidebar-content {
+  background-color: rgba(255, 254, 254, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(206, 238, 206);
+}
+
+.sidebar-harvest-content {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(225, 239, 225);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  
+}
+
+.sidebar-harvest-content p {
+  margin: 5px 0; 
+}
+
+#sidebar-title {
+  padding-top: 20px;
+  color: #66fe8f;
+  font-family: "Bebas Neue", serif;
+  letter-spacing: 2px;
+}
+
+.leaflet-container {
+  background-color: rgb(136, 128, 128) !important;
+}
+
+/* Base styles for larger screens (default) */
+
+/* For devices with a max width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
   #map-container {
-    display: flex;
+    flex-direction: column; 
   }
 
   #sidebar {
-    width: 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
-    height: 100vh;
+    width: 100%; 
+    height: auto; 
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 254, 254, 0.3); 
+    padding: 15px; 
   }
+
+  #map {
+    flex: none;
+    height: 70vh; 
+  }
+
+  #sidebar-title {
+    text-align: center; 
+    font-size: 24px; 
+  }
+
+  .sidebar-harvest-content {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px; 
+  }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+  #map {
+    height: 60vh; 
+  }
+
+  #sidebar-title {
+    font-size: 20px; 
+    letter-spacing: 1px; 
+  }
+
+  .sidebar-harvest-content {
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 12px; 
+  }
+}
