@@ -11,7 +11,7 @@ const bounds = [
   [0, 0],
   [1000, 1500],
 ];
-const image = "assets/HuntMapFINAL.jpg";
+const image = "assets/images/HuntMapFINAL.jpg";
 
 // Add the image overlay
 L.imageOverlay(image, bounds).addTo(map);
