@@ -1,6 +1,7 @@
 import { huntingAreas } from "./huntingAreas.js";
 import { harvestByArea } from "./harvestData.js";
 const sidebarContent = document.getElementById("sidebar-content");
+
 // Create the map object
 const map = L.map("map", {
   crs: L.CRS.Simple,
@@ -37,6 +38,10 @@ huntingAreas.forEach((area) => {
     
     const areaData = harvestByArea(area.name);
     const harvestHTML = areaData.map((filteredArea) => {
+
+      const imageHTML = filteredArea.image
+      ? `<img src="${filteredArea.image}" alt="Harvest Image" class="harvest-image" />`
+      : "";
       //changing the display of sex from D or B to Doe or Buck
       const sex =
         filteredArea.sex === "D"
@@ -64,6 +69,7 @@ huntingAreas.forEach((area) => {
       <span>${points}</span>
       <span>${beamLength}</span>
       <span>${outsideSpread}</span>
+      <span>${imageHTML}</span>
       </p>
       `;
     }).join("")//remove the comma between data sets

@@ -54,6 +54,15 @@ body {
   letter-spacing: 2px;
 }
 
+.harvest-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .leaflet-container {
   background-color: rgb(136, 128, 128) !important;
 }
